@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring
+END
+SessionDescriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring/SessionDescriptor.java
+END
+SessionSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring/SessionSettings.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring/package-info.java
+END
+SocketAcceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring/SocketAcceptor.java
+END
+SocketInitiator.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/10771/root/tags/1.6.0/source/core/src/main/java/quickfix/spring/SocketInitiator.java
+END

@@ -1,0 +1,103 @@
+/*
+ * Copyright Rohit Dhingra.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+apply plugin: 'java'
+apply plugin: 'osgi'
+apply plugin: 'maven'
+apply plugin: 'signing'
+apply plugin: 'eclipse'
+/**apply plugin: 'checkstyle'*/
+apply plugin: 'idea'
+
+defaultTasks 'build'
+
+group = 'com.rd'
+version = new Version(major: 1, minor: 0, revision: 0)
+
+ext {
+    fullName = 'Neutron'
+    fullDescription = 'Neutron - Trading System'
+    teamName = 'RD'
+    siteUrl = ''
+    sourceUrl = 'git@github.com:LMAX-Exchange/disruptor.git'
+
+    javaCompilerExecutable = System.env['JAVA_HOME'] ? System.env['JAVA_HOME'] + '/bin/javac' : 'javac'
+
+    if (!project.hasProperty('sonatypeUrl')) sonatypeUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+    if (!project.hasProperty('sonatypeUsername')) sonatypeUsername = ''
+    if (!project.hasProperty('sonatypePassword')) sonatypePassword = ''
+}
+
+sourceSets {
+    perf.java.srcDir 'src/perftest/java'
+}
+
+eclipse.classpath.plusConfigurations += sourceSets.perf.compileClasspath
+
+idea.module {
+    testSourceDirs += sourceSets.perf.allSource.getSrcDirs()
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+
+// tag::jar[]
+jar {
+    baseName = 'Neutron'
+    version =  '1.0.0'
+}
+// end::jar[]
+
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+tasks.withType(Compile) {
+    options.compilerArgs << '-XDignore.symbol.file' << '-Xlint:unchecked'
+    options.debug = true
+    options.fork = true
+    options.forkOptions.executable = javaCompilerExecutable
+    options.warnings = false
+}
+
+tasks.withType(Test) {
+    maxParallelForks = Runtime.runtime.availableProcessors() / 2
+}
+
+// tag::dependencies[]
+dependencies {
+    compile "com.googlecode.disruptor:disruptor:2.10.4"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+// end::wrapper[]
+
+class Version {
+    int major, minor = 0, revision = 0
+    boolean snapshot
+    String stage
+
+    String toString() {
+        "$major.$minor.$revision${stage ? '.' + stage : ''}${snapshot ? '-SNAPSHOT' : ''}"
+    }
+}
