@@ -20,6 +20,7 @@ apply plugin: 'signing'
 apply plugin: 'eclipse'
 /**apply plugin: 'checkstyle'*/
 apply plugin: 'idea'
+apply plugin: 'scala'
 
 defaultTasks 'build'
 
@@ -80,9 +81,18 @@ tasks.withType(Test) {
     maxParallelForks = Runtime.runtime.availableProcessors() / 2
 }
 
+dependencies {
+	compile ’org.scala-lang:scala-library:2.10.4’
+}
+tasks.withType(ScalaCompile) {
+	scalaCompileOptions.useAnt = false
+}
+
 // tag::dependencies[]
 dependencies {
     compile "com.googlecode.disruptor:disruptor:2.10.4"
+	compile group: ’com.typesafe.akka’, name: ’akka-actor_2.10’, version: ’2.4-SNAPSHOT’
+	compile group: ’org.scala-lang’, name: ’scala-library’, version: ’2.10.4’
 }
 // end::dependencies[]
 

@@ -3,6 +3,7 @@ package com.rd.neutron.quickfix.spring;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+
 import quickfix.*;
 
 /**
@@ -25,7 +26,7 @@ public class SocketAcceptor extends quickfix.SocketAcceptor implements Initializ
 	super(sessionFactory, settings);
     }
 
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() throws RuntimeError, ConfigError {
     	start();
     }
 

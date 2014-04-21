@@ -15,6 +15,12 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
+		<repository>
+			<id>typesafe</id>
+			<name>Typesafe Repository</name>
+			<url>http://repo.typesafe.com/typesafe/releases/</url>
+		</repository>
+
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -43,31 +49,18 @@
 			<artifactId>quickfixj-core</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>quickfixj</groupId>
-			<artifactId>quickfixj-msg-fix40</artifactId>
-			<version>1.3.1</version>
-		</dependency>
+		<!-- <dependency> <groupId>quickfixj</groupId> <artifactId>quickfixj-msg-fix40</artifactId> 
+			<version>1.3.1</version> </dependency> <dependency> <groupId>quickfixj</groupId> 
+			<artifactId>quickfixj-msg-fix41</artifactId> <version>1.3.1</version> </dependency> 
+			<dependency> <groupId>quickfixj</groupId> <artifactId>quickfixj-msg-fix42</artifactId> 
+			<version>1.3.1</version> </dependency> -->
 		<dependency>
-			<groupId>quickfixj</groupId>
-			<artifactId>quickfixj-msg-fix41</artifactId>
-			<version>1.3.1</version>
-		</dependency>
-		<dependency>
-			<groupId>quickfixj</groupId>
-			<artifactId>quickfixj-msg-fix42</artifactId>
-			<version>1.3.1</version>
-		</dependency>-->
-		<dependency> 
 			<groupId>quickfixj</groupId>
 			<artifactId>quickfixj-msg-fix43</artifactId>
 			<version>1.3.1</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>quickfixj</groupId>
-			<artifactId>quickfixj-msg-fix44</artifactId>
-			<version>1.3.1</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>quickfixj</groupId> <artifactId>quickfixj-msg-fix44</artifactId> 
+			<version>1.3.1</version> </dependency> -->
 		<dependency>
 			<groupId>org.apache.mina</groupId>
 			<artifactId>mina-core</artifactId>
@@ -83,8 +76,11 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.3.0</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-actor_2.10</artifactId>
+			<version>2.3.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

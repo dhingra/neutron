@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/disruptor/disruptor/2.10.4/disruptor-2.10.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/4.0.3.RELEASE/spring-context-4.0.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/quickfixj/quickfixj-core/1.3.1/quickfixj-core-1.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/quickfixj/quickfixj-msg-fix43/1.3.1/quickfixj-msg-fix43-1.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/mina/mina-core/1.1.0/mina-core-1.1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.3.0/slf4j-api-1.3.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.3.0/slf4j-log4j12-1.3.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.13/log4j-1.2.13.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/typesafe/akka/akka-actor_2.10/2.3.2/akka-actor_2.10-2.3.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/typesafe/config/1.2.0/config-1.2.0.jar"/>
+</classpath>

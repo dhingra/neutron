@@ -13,8 +13,8 @@ import java.util.concurrent.Executors;
 
 import com.rd.neutron.model.Trade;
 import com.lmax.disruptor.EventFactory;
-import com.rd.neutron.engine.NeutronDisruptor;
-import com.rd.neutron.engine.TradeEventProcessor;
+import com.rd.neutron.engine.disruptor.NeutronDisruptor;
+import com.rd.neutron.engine.disruptor.TradeEventProcessor;
 import com.rd.neutron.event.Event;
 
 public class DisruptorClient {
