@@ -1,5 +1,7 @@
 package com.rd.neutron.model;
 
+import com.rd.neutron.pattern.Cacheable;
+
 /**
  * 
  * @author Rohit Dhingra

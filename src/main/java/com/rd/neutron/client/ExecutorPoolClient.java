@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Collections;
 
-import com.rd.neutron.engine.blocking.NeutronExecutorWorkerThread;
+import com.rd.neutron.core.processor.blocking.NeutronExecutorWorkerThread;
 
 public class ExecutorPoolClient<T> {
 
